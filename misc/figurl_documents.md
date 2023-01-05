@@ -4,7 +4,7 @@
 
 Figurl's interactive documents provide a new way of presenting scientific data, with text and interactive figures embedded together in one document. Readers are able to explore and visualize the data in greater detail, while also gaining access to the scientific explanations that accompany them.
 
-The interactive documents are simply markdown files with embedded figurl links that are rendered through figurl.org. Here is [work-in-progress Figurl document](https://doc.figurl.org/gh/dcmnts/isosplit-paper/blob/main/isosplit.md) - scroll down to the Results section to see the embedded figures.
+The interactive documents are simply markdown files with embedded figurl links that are rendered through figurl.org. Here is a [work-in-progress Figurl document](https://doc.figurl.org/gh/dcmnts/isosplit-paper/blob/main/isosplit.md) -- scroll down to the Results section to see the embedded figures.
 
 There are three modes for working with these documents:
 
@@ -40,8 +40,16 @@ https://figurl.org/f?v=gs://figurl/bluster-views-1&d=sha1://ebcb6b4cda6f756f79dc
 
 ## Figure captions
 
-Figure captions are supported - see the above example.
+Figure captions are supported using the `<figure>` and `<figcaption>` html tags. See the above example.
 
 ## Citations
 
-Citations are supported - see the above example. You can auto-generate the bibliography using the `generate-doc-bibliography` command of `figurl-to-html`.
+Citations are supported - see the above example. You can auto-generate the bibliography based on the inline citations and a .bib file using the `generate-doc-bibliography` command of `figurl-to-html`.
+
+## LaTeX
+
+Embedded LaTeX is supported using MathJax, just as it is [on GitHub](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions).
+
+## Figure height
+
+While the width is always set to 100%, the height of an embedded figure can be specified in the markdown file using yaml syntax within a comment directly below the figURL. See the above example to see how this is done.
