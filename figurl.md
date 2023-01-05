@@ -1,8 +1,75 @@
-# Collaborative scientific visualization and data sharing using Figurl
+# Interactive and collaborative scientific visualization using Figurl
 
 ## Abstract
 
-Data visualization is an essential tool for scientists to effectively communicate their results and to collaborate with other researchers. However, while traditional software can produce powerful interactive visualizations, it is often difficult to share these as interactive figures with other researchers or with the broader scientific community. To address this, we have developed Figurl, a web-based data visualization system that makes it easy to generate, view, share, and store web-based interactive figures from the convenience of Python scripts with minimal configuration. Figurl utilizes shareable links, content-addressable storage, and domain-specific plugins to allow scientists to easily view and share their data in the browser. We demonstrate the utility of Figurl in two neuroscience contexts, illustrating the potential of this technology to facilitate collaborative science.
+Data visualization is an essential tool for scientists to effectively communicate their results and to collaborate with other researchers. However, most scientific visualizations are limited either in their interactivity or with their portability. To address these limitations, we have developed Figurl, a web-based data visualization system that makes it easy to generate, view, share, and archive web-based interactive figures from Python scripts with minimal configuration. Figurl utilizes shareable links, content-addressable storage, domain-specific plugins, and Zenodo to allow scientists to easily view, share, and archive browser-based visualizations. We demonstrate the utility of Figurl in two neuroscience contexts, illustrating the potential of this technology to facilitate collaborative science.
+
+## Overview of existing tools
+
+### Paraview/ParaviewWeb
+
+Open source, desktop, medical imaging datasets, customizable, ParaViewWeb is a framework for creating web applications for scientific visualizations
+
+From GPT-3. Not sure how accurate
+Explain how one would use ParaviewWeb to share an interactive visualization.
+	ParaviewWeb is an open source software package that allows users to share interactive visualizations through a web browser. To use ParaviewWeb, the user should first create a visualization in Paraview, the powerful 3D data visualization program. Once the visualization is complete, the user can save it as an .pvsm file. This file can be uploaded to a web server and accessed through a web browser using the ParaviewWeb viewer. The user can then share the interactive visualization with others, who can interact with it using the ParaviewWeb viewer. The user can control the visualization by selecting different options from the viewer's menu and manipulating the data. ParaviewWeb also allows users to share their visualization with others by creating a link that can be shared over email, social media, or other web-based platforms.
+
+### VTK / vtkWeb
+
+From GPT-3. Not sure how accurate.
+Explain how one would use vtkWeb to share an interactive visualization.
+	1. Install a web-server such as Apache, Nginx or IIS.
+	2. Download and install the vtkWeb package.
+	3. Set up a vtkWeb application on the web-server.
+	4. Create the visualization in VTK or ParaView.
+	5. Publish the visualization using vtkWeb.
+	6. Share the URL of the visualization with your audience.
+	7. Your audience can now access the interactive visualization and use it to explore the data.
+
+### Plotly dash
+
+From GPT-3. Not sure how accurate.
+Explain how one would use plotly dash to share an interactive visualization.
+	Plotly Dash is an open source library that can be used to create interactive web applications for data visualization. To use Plotly Dash to share an interactive visualization, first create the visualization using Plotly's graphing library. Then define a 'layout' object in the Dash application which will contain the figure created using the Plotly library. Once the layout is defined, use the Dash 'app.layout' object to add components such as input controls and other HTML elements. Finally, use the 'dash.run_server()' function to launch the application in a local web server. This will allow users to access the interactive visualization from a web browser.
+
+## HoloViz
+
+From GPT-3. Not sure how accurate.
+Explain how one would use holoviz to share an interactive visualization.
+	1. Begin by importing the necessary packages to use HoloViz including: hvPlot, HoloViews, and Panel.
+	2. Prepare your data and create the appropriate plot type (e.g. scatter plot, bar chart, etc.) using hvplot.
+	3. Use HoloViews to add interactive elements to the plot, such as hover-over information, selection of regions, and color palette changes.
+	4. Use Panel to turn the plot into an interactive widget that can be shared.
+	5. Publish the plot online using either the HoloViz web app or the Panel serve command.
+	6. Share the link to the interactive visualization with friends and colleagues.
+
+## Bokeh
+
+From GPT-3. Not sure how accurate.
+Explain how one would use bokeh to share an interactive visualization.
+	1. Create the visualization: Create your visualization in Bokeh. This can be done with a Bokeh server or by using the Bokeh plotting API.
+	2. Embed the visualization: Use the Bokeh embed command to embed the visualization in an HTML page that can be opened with a web browser.
+	3. Share the visualization: Share the HTML page with others, or post the page on a website, or share it through social media. This will allow others to view and interact with the visualization.
+
+### Datajoint
+
+### Jupyter -
+
+### Blender
+
+desktop software for 3D visualization (does not run in browser as far as I can tell)
+
+### Three.js / WebGL / Vue.js / d3.js
+
+### Figshare / Open Science Framework (OSF)
+
+### Python packages: matplotlib, seaborn, plotly, bokeh, altair, vispy
+
+## CodeOcean
+
+## Infogram.com
+
+“Create engaging infographics and reports in minutes”
 
 ## Introduction
 
@@ -53,7 +120,7 @@ Figure 2. Example script demonstrating basic Figurl usage.
 
 In general, this procedure depends on the existance of a suitable visualization plugin that is capable of rendering a view of the data. In this paper, we discuss two domain-specific plugins to render a view of the data: one for electrophysiology and spike sorting, and the other for sound source localization.
 
-### Kachery zones
+### Kachery
 
 Figurl is built on the Kachery network, which is composed of content-addressable cloud storage databases called Kachery zones. These zones are hosted and maintained by individual research labs or collaborative teams, with a public zone maintained by the authors' institution. This decentralization allows labs with large datasets to provision and access their own resources without overloading the central public server. With that said, the public zone is open to everyone for moderate usage, enabling researchers to get started generating shareable links from their Python scripts with minimal configuration.
 
@@ -101,6 +168,8 @@ Usually the visualization plugin is hosted on a cloud storage bucket. For exampl
 Visualization plugins are simply static websites that are embedded in the parent figurl.org web application. This is a big simplification compared with traditional websites that usually require a running server providing a live API. The responsibility for loading data, verifying the integrity, and managing other aspects of the user interface are removed from the visualization itself, and handled by the parent figurl.org app. This design allows us to store visualization plugins on storage buckets for long-term availability; this is crucial for allowing figURLs to stay valid even as the visualization plugins are updated and improved over time.
 
 ### Electrophysiology and spike sorting
+
+Examples from spikeinterface -- Python code
 
 ### Sound source localization
 
