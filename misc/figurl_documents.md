@@ -53,3 +53,7 @@ Embedded LaTeX is supported using MathJax, just as it is [on GitHub](https://doc
 ## Figure height
 
 While the width is always set to 100%, the height of an embedded figure can be specified in the markdown file using yaml syntax within a comment directly below the figURL. See the above example to see how this is done.
+
+## Upload to Zenodo
+
+The figurl-to-html package provides a tool for uploading a standalone Figurl document to Zenodo. This document is then archived and can be viewed using zenmirror.org. More details will be provided in the future.
