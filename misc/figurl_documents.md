@@ -2,7 +2,7 @@
 
 ## Overview
 
-Figurl's interactive documents provide a new way of presenting scientific data, with text and interactive figures embedded together in one document. Readers are able to explore and visualize the data in greater detail, while also gaining access to the scientific explanations that accompany them.
+Figurl's interactive documents provide a new way of presenting scientific data, with text and interactive figures embedded together in one document. Authors can create and develop documents on their local machine, share them on GitHub, and archive them on Zenodo. Readers are able to explore and visualize the data in greater detail, while also gaining access to the scientific explanations that accompany them.
 
 The interactive documents are simply markdown files with embedded figurl links that are rendered through figurl.org. Here is a [work-in-progress Figurl document](https://doc.figurl.org/gh/dcmnts/isosplit-paper/blob/main/isosplit.md) -- scroll down to the Results section to see the embedded figures.
 
